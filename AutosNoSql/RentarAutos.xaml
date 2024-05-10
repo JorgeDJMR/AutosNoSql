@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutosNoSql.RentarAutos"
+             Title="Registrar auto"
+             BackgroundColor="white">
+             
+
+    <ScrollView>
+        <StackLayout x:Name="hola44" Padding="15" Spacing="20" Orientation="Vertical" VerticalOptions="FillAndExpand">
+
+            <Frame CornerRadius="3" Grid.Row="1" VerticalOptions="CenterAndExpand" Margin="0,0,0,0" BackgroundColor="#efefef" HasShadow="True" BorderColor="#cfd0d8">
+                <VerticalStackLayout Spacing="25">
+
+                    <Image x:Name="imgFoto" Aspect="AspectFit" HeightRequest="200" />
+                    <!-- Botón para cargar imagen -->
+                    <Button Text="Cargar Imagen" Clicked="Button_Clicked" />
+
+                    <Label Text="DATOS" FontSize="28" FontAttributes="Bold" TextColor="Black"/>
+                    
+                    
+
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EntryPlacas" Placeholder="Placas" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" Completed="EntryPlacas_Completed"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EntryMarca" Placeholder="Marca" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EntryModelo" Placeholder="Modelo" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EntryAño" Placeholder="año" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EntryColor" Placeholder="Color" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EntryPrecioPorDia" Placeholder="Precio por dia" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric" />
+                        </Grid>
+                    </Frame>
+
+                    <StackLayout x:Name="botones" Orientation="Horizontal" >
+                        <Button x:Name="btnGuardar" 
+                        Text="Guardar"
+                        BackgroundColor="BlueViolet"
+                        TextColor="White" 
+                        BorderColor="Black" 
+                        HorizontalOptions="FillAndExpand" 
+                        Margin="10" 
+                        Clicked="btnGuardar_Clicked"></Button >
+                        <Button x:Name="btnModificar" Clicked="btnModificar_Clicked" Text="Modificar" BackgroundColor="BlueViolet" TextColor="White" BorderColor="Black" HorizontalOptions="FillAndExpand" Margin="10"></Button>
+                    </StackLayout>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+
+
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

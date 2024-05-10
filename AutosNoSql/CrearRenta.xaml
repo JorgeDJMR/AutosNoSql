@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AutosNoSql.CrearRenta"
+             Title="Rentar"
+             BackgroundColor="White">
+
+
+    <ScrollView>
+        <StackLayout x:Name="CrearRentaStack" Padding="15" Spacing="20" Orientation="Vertical" VerticalOptions="FillAndExpand">
+
+            <Frame CornerRadius="3" Grid.Row="1" VerticalOptions="CenterAndExpand" Margin="0,0,0,0" BackgroundColor="#efefef" HasShadow="True" BorderColor="#cfd0d8">
+                <VerticalStackLayout Spacing="25">
+
+                    <Label Text="Rentar" FontSize="28" FontAttributes="Bold" TextColor="Black"/>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="ECliente" Placeholder="Cliente" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="ETelefono" Keyboard="Numeric" Placeholder="Telefono" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EPlacas" Placeholder="Placas" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" IsEnabled="False"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EPrecioPorDia" Placeholder="Precio por dia" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric" IsEnabled="False"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill" >
+                        <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                            <Label Text="Fecha de salida:" VerticalOptions="Center" TextColor="Black"/>
+                            <DatePicker VerticalOptions="Center" x:Name="FechaSalida" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" PropertyChanged="FechaSalida_PropertyChanged"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                            <Label Text="Fecha de entrega:" VerticalOptions="Center" TextColor="Black"/>
+                            <DatePicker VerticalOptions="Center" x:Name="FechaEntrega" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" PropertyChanged="FechaEntrega_PropertyChanged"/>
+                        </Grid>
+                    </Frame>
+
+                    <Frame Padding="10" BorderColor="Transparent" CornerRadius="0" BackgroundColor="white" HorizontalOptions="Fill">
+                        <Grid ColumnDefinitions="*" ColumnSpacing="10">
+                            <Entry VerticalOptions="Center" x:Name="EPrecioTotal" Placeholder="Precio total" Grid.Column="1" TextColor="Black" HorizontalOptions="FillAndExpand" Keyboard="Numeric" IsEnabled="False"/>
+                        </Grid>
+                    </Frame>
+
+                    <StackLayout x:Name="botones" Orientation="Horizontal" >
+                        <Button x:Name="btnGuardarR" 
+                        Text="Guardar"
+                        BackgroundColor="BlueViolet"
+                        TextColor="White" 
+                        BorderColor="Black" 
+                        HorizontalOptions="FillAndExpand" 
+                        Margin="10" 
+                        Clicked="btnGuardarR_Clicked"></Button >
+                        
+                    </StackLayout>
+
+                </VerticalStackLayout>
+
+            </Frame>
+
+
+
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>
